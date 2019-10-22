@@ -1,0 +1,17 @@
+﻿@{
+    Layout = null;
+}
+<html>
+<head>
+  <title>Hello React</title>
+</head>
+<body>
+    <!-- This will render the component server-side -->
+    @Html.React("HomePage", new {
+        name = "Nhuan"
+    })
+
+    <script src="~/dist/HomePage.js"></script>
+    @Html.ReactInitJavaScript(clientOnly: true)
+</body>
+</html>
